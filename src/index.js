@@ -72,7 +72,6 @@ Respond only in JSON format like:
 });
 
   app.get("/ping", (req, res) => {
-  console.log("🔁 Ping received at:", new Date().toLocaleTimeString());
   res.status(200).send("pong");
 });
 
