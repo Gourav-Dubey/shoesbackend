@@ -71,6 +71,12 @@ Respond only in JSON format like:
   }
 });
 
+  app.get("/ping", (req, res) => {
+  console.log("🔁 Ping received at:", new Date().toLocaleTimeString());
+  res.status(200).send("pong");
+});
+
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
